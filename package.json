@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot-x",
+  "version": "1.0.0",
+  "description": "A modern discord.js v14 slash-command bot",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "register": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.22.0",
+    "dotenv": "^16.4.5",
+    "openai": "^5.20.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
