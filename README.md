@@ -341,9 +341,3 @@ When reporting issues, include:
 - Steps to reproduce
 - Bot configuration details
 - Discord.js and Node.js versions
-
----
-
-**Built with ❤️ using Discord.js v14 and OpenAI GPT-5**
-
-*Last Updated: September 2025*
