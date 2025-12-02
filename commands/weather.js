@@ -12,9 +12,11 @@ module.exports = {
     const location = interaction.options.getString('location');
     
     try {
-      // Using a free weather API (OpenWeatherMap free tier)
-      // Note: In production, you'd want to add an API key for this
-      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(location)}&appid=demo&units=metric`);
+      if (!process.env.OPENWEATHER_API_KEY) {
+        return await interaction.reply({ content: '❌ OpenWeather API key not configured. Please contact the bot administrator.', ephemeral: true });
+      }
+
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(location)}&appid=${process.env.OPENWEATHER_API_KEY}&units=metric`);
       
       if (!response.ok) {
         return await interaction.reply({ content: '❌ Could not find weather data for that location. Try a different city name.', ephemeral: true });

@@ -1,10 +1,10 @@
 # Discord Bot X 🤖
 
-A comprehensive, feature-rich Discord bot built with Discord.js v14, featuring moderation tools, fun commands, utilities, server management, and **ChatGPT AI integration** powered by OpenAI's latest GPT-5 model.
+A comprehensive, feature-rich Discord bot built with Discord.js v14, featuring moderation tools, fun commands, utilities, server management, and **ChatGPT AI integration** powered by OpenAI's GPT-4o model.
 
 ![Discord Bot](https://img.shields.io/badge/Discord-Bot-7289da?style=for-the-badge&logo=discord&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-GPT--5-412991?style=for-the-badge&logo=openai&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)
 
 ## 🌟 Features
 
@@ -36,7 +36,7 @@ A comprehensive, feature-rich Discord bot built with Discord.js v14, featuring m
 - **Message Repeater** - Make the bot say custom messages
 
 ### 🤖 AI Integration
-- **ChatGPT Conversations** - Full ChatGPT integration using OpenAI's latest GPT-5 model
+- **ChatGPT Conversations** - Full ChatGPT integration using OpenAI's GPT-4o model
 - **Comprehensive Responses** - Support for detailed, long-form AI responses
 - **Multi-message Handling** - Automatically splits long responses across multiple messages
 - **Flexible AI Personality** - Configured for open, detailed, and helpful conversations
@@ -78,6 +78,7 @@ DISCORD_TOKEN=your_discord_bot_token_here
 CLIENT_ID=your_discord_application_client_id
 GUILD_ID=your_discord_server_id
 OPENAI_API_KEY=your_openai_api_key_here
+OPENWEATHER_API_KEY=your_openweather_api_key_here
 ```
 
 ### 4. Installation & Deployment
@@ -122,7 +123,7 @@ npm start
 | `/uptime` | Bot uptime | `/uptime` | Days, hours, minutes, seconds |
 | `/help` | Command list | `/help` | Shows all available commands |
 | `/remind` | Set a reminder | `/remind <message> <minutes>` | Max 7 days (10,080 minutes) |
-| `/weather` | Get weather info | `/weather <location>` | Requires API for full functionality |
+| `/weather` | Get weather info | `/weather <location>` | Requires OpenWeather API key |
 
 ### Information Commands
 
@@ -137,18 +138,14 @@ npm start
 
 | Command | Description | Usage | Capabilities |
 |---------|-------------|-------|--------------|
-| `/chat` | ChatGPT conversation | `/chat <message>` | Full GPT-5 powered conversations |
+| `/chat` | ChatGPT conversation | `/chat <message>` | Full GPT-4o powered conversations |
 
 ## 🛠️ Technical Architecture
 
 ### Project Structure
 ```
 discord-bot-x/
-├── commands/           # Slash command modules
-│   ├── moderation/    # Ban, kick, mute, etc.
-│   ├── fun/           # Games and entertainment
-│   ├── utility/       # Helpful tools
-│   └── ai/            # ChatGPT integration
+├── commands/           # Slash command modules (flat structure)
 ├── events/            # Discord.js event handlers
 │   ├── ready.js       # Bot startup
 │   └── interactionCreate.js  # Command handling
@@ -159,7 +156,7 @@ discord-bot-x/
 
 ### Core Technologies
 - **Discord.js v14** - Modern Discord API wrapper
-- **OpenAI Node.js SDK** - GPT-5 integration
+- **OpenAI Node.js SDK** - GPT-4o integration
 - **Node.js 18+** - Runtime environment
 - **REST API** - Command deployment
 
@@ -197,7 +194,7 @@ intents: [
 ```
 
 ### OpenAI Configuration
-- **Model**: GPT-5 (latest available)
+- **Model**: GPT-4o
 - **Max Tokens**: 1,500 completion tokens
 - **Response Handling**: Automatic chunking for long responses
 - **Fallback**: Graceful error handling with informative messages
@@ -323,7 +320,7 @@ The bot provides comprehensive logging:
 - [dotenv](https://github.com/motdotla/dotenv) - Environment management
 
 ### API Credits
-- **OpenAI GPT-5** - Advanced AI capabilities
+- **OpenAI GPT-4o** - Advanced AI capabilities
 - **Discord API** - Real-time messaging platform
 - **Weather API** - Global weather data
 
