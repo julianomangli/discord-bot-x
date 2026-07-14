@@ -341,3 +341,9 @@ When reporting issues, include:
 - Steps to reproduce
 - Bot configuration details
 - Discord.js and Node.js versions
+
+## Live showcase
+
+[Open the interactive Vercel case study](https://mangli-commerce-studio.vercel.app/projects/discord-bot-x).
+
+The showcase explains this project's purpose, technical signal, and interaction model. This repository remains the source of truth for the implementation.
